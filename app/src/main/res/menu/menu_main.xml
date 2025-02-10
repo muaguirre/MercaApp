@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/MercaApp.MenuStyle">
+
+    <!-- Publicar Anuncio -->
+    <item
+        android:id="@+id/menu_add_ad"
+        android:title="Publicar Anuncio"
+        android:icon="@drawable/ic_add_ad"
+        app:showAsAction="always"/>
+
+    <!-- Mis Anuncios -->
+    <item
+        android:id="@+id/menu_my_ads"
+        android:title="Mis Anuncios"
+        android:icon="@drawable/ic_my_ads"
+        app:showAsAction="never"/>
+
+    <!-- Anuncios Finalizados -->
+    <item
+        android:id="@+id/menu_finished_ads"
+        android:title="Anuncios Finalizados"
+        android:icon="@drawable/ic_finished_ads"
+        app:showAsAction="never"/>
+
+    <!-- Mensajes -->
+    <item
+        android:id="@+id/menu_messages"
+        android:title="Mensajes"
+        android:icon="@drawable/ic_messages"
+        app:showAsAction="never"/>
+
+    <!-- Perfil -->
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Mi Perfil"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="never"/>
+
+    <!-- Cerrar Sesión -->
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Cerrar Sesión"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="never"/>
+</menu>

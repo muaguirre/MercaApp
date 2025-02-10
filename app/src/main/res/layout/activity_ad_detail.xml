@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.AdDetailActivity">
+
+    <!-- Imagen del Anuncio -->
+    <ImageView
+        android:id="@+id/imageViewAdDetail"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagen del anuncio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="16:9"
+        android:clipToOutline="true"/>
+
+    <!-- Título del Anuncio -->
+    <TextView
+        android:id="@+id/textViewTitleDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Título del anuncio"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imageViewAdDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Categoría -->
+    <TextView
+        android:id="@+id/textViewCategoryDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoría"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitleDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Contador regresivo -->
+    <TextView
+        android:id="@+id/textViewTimeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiempo restante: 00:00:00"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitleDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Origen -->
+    <TextView
+        android:id="@+id/textViewOriginDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Origen: Provincia - Población"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/textViewCategoryDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Destino -->
+    <TextView
+        android:id="@+id/textViewDestinationDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Destino: Provincia - Población"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/textViewOriginDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Descripción del anuncio -->
+    <TextView
+        android:id="@+id/textViewDescriptionDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Descripción del anuncio..."
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:elevation="2dp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/textViewDestinationDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Oferta más baja actual -->
+    <TextView
+        android:id="@+id/textViewLowestBid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Oferta más baja: 0€"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescriptionDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Botones alineados inmediatamente debajo de la oferta más baja -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/textViewLowestBid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Botón para hacer una oferta -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPlaceBid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ofertar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botón para contactar con el cliente -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonContactClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Contactar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

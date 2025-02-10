@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombres de Pantallas -->
+    <string name="app_name">MercaApp</string>
+    <string name="login_label">Iniciar Sesión</string>
+    <string name="register_label">Registro</string>
+    <string name="main_label">Inicio</string>
+    <string name="post_ad_label">Publicar Anuncio</string>
+    <string name="profile_label">Mi Perfil</string>
+    <string name="messages_label">Mensajes</string>
+    <string name="my_ads_label">Mis Anuncios</string>
+
+    <!-- LoginActivity -->
+    <string name="email_hint">Correo Electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="register_button">Registrarse</string>
+
+    <!-- Mensajes de Autenticación -->
+    <string name="error_email_empty">El email es obligatorio</string>
+    <string name="error_password_empty">La contraseña es obligatoria</string>
+    <string name="login_success">Inicio de sesión exitoso</string>
+    <string name="login_failed">Credenciales incorrectas</string>
+
+    <!-- Registro -->
+    <string name="name_hint">Nombre Completo</string>
+    <string name="confirm_password_hint">Confirmar Contraseña</string>
+    <string name="role_client">Cliente</string>
+    <string name="role_transportista">Transportista</string>
+    <string name="register_success">Registro exitoso</string>
+    <string name="register_error">Error en el registro</string>
+    <string name="already_have_account">¿Ya tienes cuenta? Inicia sesión</string>
+
+    <!-- Mensajes de Validación -->
+    <string name="error_empty_fields">Por favor, completa todos los campos</string>
+    <string name="error_password_mismatch">Las contraseñas no coinciden</string>
+
+    <!-- Nueva: Pantalla de Detalles del Anuncio -->
+    <string name="ad_detail_label">Detalles del Anuncio</string>
+
+    <!-- Chat -->
+    <string name="chat_label">Chat</string>
+
+    <string name="edit_ad_label">Editar Anuncio</string>
+
+    <string name="finished_ads_label">Anuncios Finalizados</string>
+    <string name="default_notification_channel_id">mercapp_channel</string>
+
+
+
+
+</resources>

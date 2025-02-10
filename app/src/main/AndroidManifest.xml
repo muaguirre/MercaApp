@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eric.mercaapp">
+
+    <!-- Permisos esenciales para conectividad -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Permisos para manejo de imágenes y almacenamiento -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" android:maxSdkVersion="33"/> <!-- Android 13+ -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/> <!-- Android 12 e inferiores -->
+
+    <!-- Permisos para notificaciones en Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" android:maxSdkVersion="33"/>
+
+    <!-- Permisos para Firebase Cloud Messaging -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MercaApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MercaApp"
+        android:usesCleartextTraffic="true">
+
+        <!-- Deshabilitar Firebase App Check -->
+        <meta-data
+            android:name="firebase_app_check_enabled"
+            android:value="false" />
+
+        <!-- Pantalla de Inicio de Sesión -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:label="MercaApp"
+            android:theme="@style/Theme.MercaApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--  Pantalla de Registro -->
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false"
+            android:label="@string/register_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+
+
+        <!-- Pantalla Principal (Debe ser EXPORTADA) -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Publicar Anuncios -->
+        <activity
+            android:name=".activities.PostAdActivity"
+            android:exported="false"
+            android:label="@string/post_ad_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Perfil del Usuario -->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false"
+            android:label="@string/profile_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Mensajes entre usuarios -->
+        <activity
+            android:name=".activities.MessagesActivity"
+            android:exported="false"
+            android:label="@string/messages_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Mis Anuncios -->
+        <activity
+            android:name=".activities.MyAdsActivity"
+            android:exported="false"
+            android:label="@string/my_ads_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Anuncios Finalizados -->
+        <activity
+            android:name=".activities.FinishedAdsActivity"
+            android:exported="false"
+            android:label="@string/finished_ads_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Detalles del Anuncio -->
+        <activity
+            android:name=".activities.AdDetailActivity"
+            android:exported="false"
+            android:label="@string/ad_detail_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Chat entre usuarios -->
+        <activity
+            android:name=".activities.ChatActivity"
+            android:exported="true"
+            android:label="@string/chat_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Editar Anuncio -->
+        <activity
+            android:name=".activities.EditAdActivity"
+            android:exported="true"
+            android:label="@string/edit_ad_label"
+            android:theme="@style/Theme.MercaApp"/>
+
+        <!-- Servicio para recibir notificaciones de Firebase Messaging -->
+        <service
+            android:name=".firebase.FirebaseService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!--Servicio de Firebase Messaging -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id"/>
+
+        <activity android:name=".activities.ForgotPasswordActivity"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

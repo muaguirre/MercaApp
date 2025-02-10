@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "526551704485",
+    "project_id": "mercaapp-716f3",
+    "storage_bucket": "mercaapp-716f3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526551704485:android:8808dfaf21985444797e4c",
+        "android_client_info": {
+          "package_name": "com.eric.mercaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdvdBk4oEGBeBP37FhQ9IaueiyrJEI9BA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

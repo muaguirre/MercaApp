@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema Claro -->
+    <style name="Theme.MercaApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">@android:color/black</item>
+
+        <!-- Asegurar fondo blanco -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:navigationBarColor">@color/black</item>
+
+        <!-- Ajustes de texto -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textAppearance">@style/MercaApp.Text</item>
+
+        <!--Aplicación de estilos globales -->
+        <item name="android:buttonStyle">@style/MercaApp.Button</item>
+        <item name="popupMenuStyle">@style/MercaApp.MenuStyle</item>
+    </style>
+
+    <!-- Tema Oscuro -->
+    <style name="Theme.MercaApp.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSurface">@android:color/black</item>
+        <item name="colorOnSurface">@android:color/white</item>
+
+        <!--fondo oscuro -->
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+
+        <!-- Ajustes de texto -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textAppearance">@style/MercaApp.Text</item>
+
+        <!--Aplicación de estilos globales -->
+        <item name="android:buttonStyle">@style/MercaApp.Button</item>
+        <item name="popupMenuStyle">@style/MercaApp.MenuStyle</item>
+    </style>
+
+    <!--Estilo Global para Botones -->
+    <style name="MercaApp.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <!--Estilo Global para Textos -->
+    <style name="MercaApp.Text" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <!-- Estilo para Menús -->
+    <style name="MercaApp.MenuStyle" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:itemTextAppearance">@style/MercaApp.MenuItemText</item>
+    </style>
+
+    <!-- Estilo para los ítems del menú -->
+    <style name="MercaApp.MenuItemText" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+</resources>
